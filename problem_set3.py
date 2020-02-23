@@ -5,18 +5,16 @@ def isWordGuessed(secretWord, lettersGuessed):
     returns: boolean, True if all the letters of secretWord are in lettersGuessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE...
 
-    detector = None
+    compare_list = []
     letter_list = list(secretWord)
-    for letter in lettersGuessed:
-        if letter not in letter_list:
-            detector = False
-    if detector != False:
-        detector = True
+    for idx in range(len(lettersGuessed)):
+        if lettersGuessed[idx] in letter_list:
+            compare_list.append(lettersGuessed[idx])
+    compare_list.sort()
+    letter_list.sort()
 
-    return detector
-
+    return(compare_list == letter_list)
 
 
 print(isWordGuessed('durian', ['h', 'a', 'c', 'd', 'i', 'm', 'n', 'r', 't', 'u']))
