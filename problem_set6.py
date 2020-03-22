@@ -10,7 +10,7 @@ def swapSort(L):
                 print(L)
     print("Final L: ", L)
 
-k = [3,6,5]
+k = [3,6]
 # print(swapSort(k))
 
 
